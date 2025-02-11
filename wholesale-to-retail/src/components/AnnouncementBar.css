@@ -1,0 +1,32 @@
+.announcement-bar {
+  background-color: #343a40; /* Dark background for a sleek dark mode look */
+  color: #fff; /* White text for high contrast */
+  padding: 16px 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400; /* Normal weight for a more casual feel */
+  font-family: 'Roboto', sans-serif; /* Casual and modern sans-serif font */
+  border-bottom: 3px solid #6c757d; /* Darker border for visual depth */
+  text-transform: uppercase; /* Bold feel with uppercase */
+  letter-spacing: 1.5px; /* Slight letter spacing for clarity */
+  position: relative;
+  animation: slideDown 1s ease-out, fadeIn 2s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+      transform: translateY(-100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

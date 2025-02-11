@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  background-color: #f7f7f7; /* Lighter background for better contrast */
+  color: #333;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, rgba(37, 37, 37, 1) 0%, rgba(3, 169, 244, 1) 100%); /* Gradient for more modern look */
+  padding: 30px 60px; /* Ample padding for a spacious look */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Deep shadow */
+  font-family: 'Dancing Script', cursive;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+}
+
+.logo {
+  font-size: 40px; /* Larger logo size */
+  font-weight: 900; /* Bolder logo */
+  color: #fff; /* White logo on gradient background */
+  letter-spacing: 4px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Subtle zoom effect */
+  color: #ffdd57; /* Change color on hover */
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* White color for links */
+  font-size: 18px;
+  font-weight: 600; /* Bold font for readability */
+  position: relative;
+  transition: color 0.3s, transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #ffdd57;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffdd57; /* Gold color for hover */
+  transform: translateY(-3px); /* Slight lift */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Underline animation on hover */
+}
+
+/* Buttons */
+.login-button {
+  padding: 15px 30px;
+  background-color: #ffdd57;
+  border: none;
+  border-radius: 50px;
+  color: #212529;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-button:hover {
+  background-color: #fbbf24;
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.quote-button {
+  padding: 15px 30px;
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quote-button:hover {
+  background-color: #004085;
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient Effect on Hover for Buttons */
+.login-button:hover, .quote-button:hover {
+  background: linear-gradient(45deg, #ffdd57, #fbbf24); /* Gradient hover effect */
+}
+
+/* Icon Integration */
+.navbar .nav-links a::before {
+  content: "\f007"; /* Using Font Awesome user icon */
+  font-family: 'Font Awesome 5 Free'; /* Font Awesome for icons */
+  font-weight: 900;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.navbar .nav-links a:hover::before {
+  transform: translateX(5px); /* Slide icon to the right on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      padding: 20px 30px;
+  }
+
+  .logo {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 20px;
+  }
+
+  .nav-links a {
+      font-size: 20px;
+  }
+
+  .login-button, .quote-button {
+      width: 100%;
+      text-align: center;
+  }
+}
